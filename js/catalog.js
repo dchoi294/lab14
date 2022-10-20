@@ -51,14 +51,12 @@ function updateCounter() {
   counter.textContent = ` ${cart.items.length} items`;
 }
 
-// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
+// DONE: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  console.log(CartItem.product.value);
-  console.log(CartItem.quantity.value);
-  // TODO: Get the item and quantity from the form
-  let itemName = CartItem.product.value;
-  let itemQuantity = CartItem.quantity.value;
-  // TODO: Add a new element to the cartContents div with that information
+  // DONE: Get the item and quantity from the form
+  let itemName = document.getElementById('items').value;
+  let itemQuantity = document.getElementById('quantity').value;
+  // DONE: Add a new element to the cartContents div with that information
   let cartContents = document.getElementById('cartContents');
   let li = document.createElement('li');
   cartContents.appendChild(li);
